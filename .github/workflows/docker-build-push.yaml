@@ -47,4 +47,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}  # SSH username for the remote server
         key: ${{ secrets.SSH_KEY }}  # Private SSH key for authentication
         script: |
-          ls 
+          ./anotherdeploy.sh 
