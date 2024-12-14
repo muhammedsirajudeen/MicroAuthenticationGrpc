@@ -39,3 +39,12 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/microauth:latest
+
+    - name: SSH into Remote Server and Deploy
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: ${{ secrets.REMOTE_HOST }}  # Replace with the IP address or domain of your server
+        username: ${{ secrets.SSH_USERNAME }}  # SSH username for the remote server
+        key: ${{ secrets.SSH_KEY }}  # Private SSH key for authentication
+        script: |
+          ./sampledeploy 
