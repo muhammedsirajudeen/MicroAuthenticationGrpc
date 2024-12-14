@@ -24,4 +24,5 @@ server.addService(userProto.ProfileService.service, { AddProfile: addProfile });
 const PORT = '50052';
 server.bindAsync(`0.0.0.0:${PORT}`, grpc.ServerCredentials.createInsecure(), () => {
   console.log(`Server running at http://127.0.0.1:${PORT}`);
+  
 });
