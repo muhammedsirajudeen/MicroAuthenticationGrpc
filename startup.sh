@@ -1,0 +1,1 @@
+node ./grpcServer/authServer.js & node ./grpcServer/profileServer.js & node index.js

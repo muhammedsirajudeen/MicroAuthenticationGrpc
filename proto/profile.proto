@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+
+message ProfileRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message ProfileResponse {
+    string message = 1;
+}
+
+service ProfileService {
+  rpc AddProfile (ProfileRequest) returns (ProfileResponse);
+}
