@@ -19,6 +19,7 @@ async function LoginUser(username,password){
 
 async function SignUpUser(table,username,password){
     try {
+        
         //sql injection but who cares
         const query=`
         INSERT INTO ${table} (username,password) values ($1,$2) RETURNING*;
