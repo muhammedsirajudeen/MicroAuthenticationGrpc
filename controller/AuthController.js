@@ -5,7 +5,7 @@ function Login(req,res){
         const {username,password}=req.body
         authClient.checkLogin({ username,password }, (error, response) => {
         if (!error) {
-            res.status(200).json({message:response.message,username:response.username})
+            res.status(200).json({message:response.message,username:response.username+"sample change"})
         } else {
             console.error(error);
         }
